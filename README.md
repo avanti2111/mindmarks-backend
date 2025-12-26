@@ -1,18 +1,18 @@
-📌 MindMarks — Smart Bookmark Organizer
+### Heading 3 ** 📌 MindMarks — Smart Bookmark Organizer **
 
 MindMarks is a personal bookmark management backend built with Spring Boot, allowing users to save links, organize them into collections, add notes, and search bookmarks securely using JWT authentication.
 
 Deployed live on Render and backed by a Neon (PostgreSQL) database.
 
-🚀 Features
+### Heading 2 🚀 Features
 
-🔐 User Authentication
+### Heading 1 🔐 User Authentication
 
 Register & Login
 
 Secure JWT-based authentication
 
-🔖 Bookmark Management
+### Heading 1 🔖 Bookmark Management
 
 Create bookmarks (with or without collections)
 
@@ -20,67 +20,26 @@ Add notes explaining why you saved a link
 
 User-level access (each user sees only their bookmarks)
 
-🗂️ Collections
+### Heading 1 🗂️ Collections
 
 Optional grouping of bookmarks
 
-🔍 Search
+### Heading 1 🔍 Search
 
 Search bookmarks by title + notes
 
-☁️ Cloud Ready
+### Heading 1 ☁️ Cloud Ready
 
 PostgreSQL (Neon DB)
 
 Deployed on Render
 
-🏗️ Architecture Overview
+### Heading  2 🏗️ Architecture Overview
 
-┌──────────────┐
-│   Client     │
-│ (Postman/UI) │
-└──────┬───────┘
-       │ HTTP (JSON)
-       ▼
-┌─────────────────────────┐
-│   Spring Boot Backend   │
-│                         │
-│ ┌─────────────────────┐│
-│ │ Auth Controller     ││
-│ │ - Register/Login    ││
-│ └─────────────────────┘│
-│                         │
-│ ┌─────────────────────┐│
-│ │ Bookmark Controller ││
-│ │ - CRUD              ││
-│ │ - Search            ││
-│ └─────────────────────┘│
-│                         │
-│ ┌─────────────────────┐│
-│ │ Spring Security     ││
-│ │ - JWT Filter        ││
-│ │ - User Context      ││
-│ └─────────────────────┘│
-│                         │
-│ ┌─────────────────────┐│
-│ │ Service Layer       ││
-│ │ - Business Logic    ││
-│ └─────────────────────┘│
-│                         │
-│ ┌─────────────────────┐│
-│ │ JPA Repositories    ││
-│ └─────────────────────┘│
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│   PostgreSQL (Neon DB)  │
-│ - users                │
-│ - bookmarks            │
-│ - collections          │
-└─────────────────────────┘
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/f262cf75-59b8-453c-abad-1d8fd6510e99" />
 
-👩‍💻 Author
+
+### Heading 1 👩‍💻 Author
 
 Avanti Tambe
 Backend Engineer | Java | Spring Boot | AWS
