@@ -1,45 +1,75 @@
-### Heading 3 ** 📌 MindMarks — Smart Bookmark Organizer **
+# 📌 MindMarks — Smart Bookmark Organizer
 
-MindMarks is a personal bookmark management backend built with Spring Boot, allowing users to save links, organize them into collections, add notes, and search bookmarks securely using JWT authentication.
+**MindMarks** is a secure, backend-first bookmark management system built with **Spring Boot**.  
+It allows users to save, organize, and search bookmarks, optionally group them into collections, and attach notes explaining why a link was saved — all protected with **JWT-based authentication**.
 
-Deployed live on Render and backed by a Neon (PostgreSQL) database.
+The application is **deployed on Render** and uses **Neon (PostgreSQL)** as its cloud database.
 
-### Heading 2 🚀 Features
+---
 
-### Heading 1 🔐 User Authentication
+## 🚀 Features
 
-Register & Login
+### 🔐 User Authentication
+- User registration and login
+- Secure JWT-based authentication
+- Stateless authorization using Spring Security
 
-Secure JWT-based authentication
+---
 
-### Heading 1 🔖 Bookmark Management
+### 🔖 Bookmark Management
+- Create bookmarks with title, URL, and notes
+- Optional association with collections
+- User-level data isolation (users can only access their own bookmarks)
 
-Create bookmarks (with or without collections)
+---
 
-Add notes explaining why you saved a link
+### 🗂️ Collections
+- Group related bookmarks into collections
+- Flexible organization (bookmarks can exist with or without collections)
 
-User-level access (each user sees only their bookmarks)
+---
 
-### Heading 1 🗂️ Collections
+### 🔍 Search
+- Search bookmarks by title and notes
+- Fast and user-scoped search results
 
-Optional grouping of bookmarks
+---
 
-### Heading 1 🔍 Search
+### ☁️ Cloud Ready
+- PostgreSQL hosted on **Neon**
+- Backend deployed on **Render**
+- Environment-based configuration for secrets and database credentials
 
-Search bookmarks by title + notes
+---
 
-### Heading 1 ☁️ Cloud Ready
+## 🏗️ Architecture Overview
 
-PostgreSQL (Neon DB)
+![Architecture Diagram](https://github.com/user-attachments/assets/f262cf75-59b8-453c-abad-1d8fd6510e99)
 
-Deployed on Render
+**High-level flow:**
+- Client → REST APIs (Spring Boot)
+- Authentication via JWT
+- Business logic handled in service layer
+- Data persisted in PostgreSQL (Neon)
+- Deployed and hosted on Render
 
-### Heading  2 🏗️ Architecture Overview
+---
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/f262cf75-59b8-453c-abad-1d8fd6510e99" />
+## 🛠️ Tech Stack
 
+- **Java 17**
+- **Spring Boot**
+- **Spring Security + JWT**
+- **Spring Data JPA (Hibernate)**
+- **PostgreSQL (Neon)**
+- **Render (Deployment)**
+- **Maven**
 
-### Heading 1 👩‍💻 Author
+---
 
-Avanti Tambe
-Backend Engineer | Java | Spring Boot | AWS
+## 👩‍💻 Author
+
+**Avanti Tambe**  
+Backend Engineer  
+Java • Spring Boot • Cloud-Native Backend Systems
+
