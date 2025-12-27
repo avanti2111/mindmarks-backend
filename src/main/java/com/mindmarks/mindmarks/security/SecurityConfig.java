@@ -22,15 +22,17 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(csrf -> csrf.disable())
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/1/auth/**", "/api/1/bookmarks/**").permitAll() // REGISTER + LOGIN + BOOKMARKS
-                .anyRequest().authenticated()
-            )
-            .addFilterBefore(
-                jwtAuthenticationFilter,
-                UsernamePasswordAuthenticationFilter.class
-            );
+  .cors(cors -> cors.disable()) 
+  .csrf(csrf -> csrf.disable())
+  .authorizeHttpRequests(auth -> auth
+      .requestMatchers("/api/1/auth/**").permitAll()
+      .anyRequest().authenticated()
+  )
+  .addFilterBefore(
+      jwtAuthenticationFilter,
+      UsernamePasswordAuthenticationFilter.class
+  );
+
 
         return http.build();
     }
